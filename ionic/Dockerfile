@@ -9,4 +9,6 @@ RUN npm install -g ionic@"${IONIC_VERSION}" cordova@"${CORDOVA_VERSION}" && \
 
 WORKDIR /var/app/current
 
+EXPOSE 8100 35729
+
 ENTRYPOINT ["ionic"]
