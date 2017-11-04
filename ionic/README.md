@@ -11,7 +11,7 @@ docker run -it --rm -p 8100:8100 -p 35729:35729 -v /path/to/your/ionic-project/:
 
 ## Alias
 ```
-alias ionic="docker run -it --rm --net host --privileged -v /dev/bus/usb:/dev/bus/usb \$PWD:/var/app/current avosalmon/ionic"
+alias ionic="docker pull avosalmon/ionic:latest && docker run -it --rm --net host --privileged -v \$PWD:/var/app/current avosalmon/ionic"
 ```
 > Due to a bug in ionic, if you want to use ionic serve, you have to use --net host option 
 
