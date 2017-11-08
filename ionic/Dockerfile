@@ -1,5 +1,5 @@
 FROM node:6.11
-MAINTAINER Ryuta Hamasaki "avosalmon@gmail.com"
+LABEL author="Ryuta Hamasaki"
 
 ENV IONIC_VERSION=3.16.0 \
     CORDOVA_VERSION=7.1.0
