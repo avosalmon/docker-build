@@ -34,9 +34,6 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
 # Add www-data to root group, so that it has write permissions to storage/framework/views
 RUN usermod -a -G root www-data
 
-# Increase upload size limit to 4 MB
-COPY docker/build/assets/uploads.ini /usr/local/etc/php/conf.d/uploads.ini
-
 # Other shell scripts
 RUN echo '#!/bin/bash\nls -lah "$@"' > /usr/local/bin/ll \
     && chmod 755 /usr/local/bin/ll
